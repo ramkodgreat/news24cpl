@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="jumbotron text-center">
+        <p class="text-center"> 
+   
+        Lorem dolor sit amet, consectetur adipisicing elit. Quam fuga praesentium saepe officiis ullam, commodi eveniet itaque unde numquam laboriosam illum, accusamus vitae, accusantium eius dolorum minima nemo iste nostrum.
+        <img src="/static/img/tradewar.jpg" alt=""> 
+        </p>
+        {%  if session.logge_in == NULL %}
+        <a href="/register" class="btn btn-primary btn-lg">Register</a>
+        <a href="/login" class="btn btn-primary btn-lg">Login</a>
+        {% endif %}
+</div>
+{% endblock %}

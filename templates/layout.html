@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+    <title>News24</title>
+</head>
+<body>
+    {% include 'includes/_navbar.html' %}
+
+
+    <div class ="container">
+        {% include 'includes/_messages.html' %}
+        {% block body %} {% endblock %}
+    </div>
+ <script src="{{url_for('static', filename='js/jquery.js')}}">
+        </script>
+
+<script src="{{url_for('static', filename='js/bootstrap.min.js')}}">
+</script>
+
+
+<marquee behavior="" direction=""><h1 class="text-center">Welcome to News24</h1></marquee>
+</div>
+
+
+<footer>
+        <p>Copyright &copy; Ramkodgreat@CodePlateau 2019, All Rights Reserved</p>
+    </footer>
+        &copy;2019
+    </div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h1>News Feeds</h1>
+
+    <ul class ="list-group">
+        {% for createpost in createPost %}
+        <li class = "list-group-item"><a href="createPost/{{createPost.id}}" {{createPost.title}}>
+            {{ createpost.title }}
+        </a>         
+        </li>
+            {% endfor %}
+    </ul>
+   
+{% endblock %}

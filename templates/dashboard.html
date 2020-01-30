@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block body %}
+<h1>Admin Panel<small> Welcome {{ session.username}}</small></h1>
+<a class="btn btn-success" href="/addpost"> Create A Post</a>
+<hr>
+<table class="table table-striped">
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Date</th>
+        <th></th>
+        <th></th>
+    </tr>
+    {% for createpost in createPost %}
+    
+    <tr>
+        <td>{{createpost.id}}</td>
+        <td>{{createpost.title}} </td>
+        <td>{{createpost.author}} </td>
+        <td>{{createpost.body}} </td>
+        <td>{{createpost.Date_registered}} </td>
+        <td><a href="edit_createpost/{{createpost.id}}" class="btn btn-warning pull-right">Editor</a></td>
+        <td>
+            <form action=" {{ url_for('delete_article', id=createPost.id) }}" method="POST">
+                <input type="hidden" name="_method" value="DELETE">
+                <input type="submit" value="Delete" class="btn btn-danger">
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock  %}

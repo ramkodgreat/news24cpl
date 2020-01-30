@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    {% from "includes/_formhelpers.html" import render_field %}
+
+    <form action="/about" method="POST">
+        <div class="jumbotron text-center">
+            <h1 class="text-center">About Us</h1>
+        <p class="lead">
+        Flask framewor is a micro-framework in Python3. It is lightweighted and flexible to work with. <br>Lorem dolor sit amet, consectetur adipisicing elit. Quam fuga praesentium saepe officiis ullam, commodi eveniet itaque unde numquam laboriosam illum, accusamus vitae, accusantium eius dolorum minima nemo iste nostrum.
+
+<h1>this is news24 site created by Ramkodgreat as instructed by mr Bello</h1>
+        </div>
+   </form>
+
+{% endblock %}
